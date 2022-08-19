@@ -47,6 +47,10 @@ public class User {
         favorites.add(new UserFavorite(id, name));
     }
 
+    public String getId() {
+        return Id;
+    }
+
     public String getEmail() {
         return this.email;
     }

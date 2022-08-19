@@ -25,5 +25,7 @@ public interface UserRepository extends CosmosRepository<User, String> {
 
     @Query("select top 1 * from c where c.email = @email and c.password = @password")
     User validateUserByPassword(@Param("email") String email, @Param("password") String password);
+
+    User findByEmail(String email);
     
 }
